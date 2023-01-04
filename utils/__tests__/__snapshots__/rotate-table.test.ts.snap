@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rotate Table #execute should return the rotated csv value 1`] = `
+{
+  "id": 1,
+  "is_valid": true,
+  "json": "[4, 1, 2, 7, 5, 3, 8, 9, 6]",
+}
+`;
