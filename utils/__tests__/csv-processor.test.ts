@@ -17,7 +17,7 @@ describe('CSV Processor', () => {
 
       expect(csvProcessor['rotateTable'].execute).toHaveBeenCalled();
       expect(csvProcessor['outputStream'].write).toHaveBeenCalled();
-    })
+    });
   });
 
   describe('#validateFile', () => {

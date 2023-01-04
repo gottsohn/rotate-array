@@ -1,6 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ArgumentProcessor = void 0;
+/**
+ * Process the command line arguments
+ * @date 04/01/2023 - 15:25:58
+ *
+ * @export
+ * @class ArgumentProcessor
+ * @typedef {ArgumentProcessor}
+ */
 class ArgumentProcessor {
     constructor(csvProcessor) {
         this.csvProcessor = csvProcessor;

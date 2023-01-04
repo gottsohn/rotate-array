@@ -1,5 +1,5 @@
-import { CSVRecord } from "../../models/types";
-import { RotateTable } from "../rotate-table"
+import { CSVRecord } from '../../models/types';
+import { RotateTable } from '../rotate-table';
 
 const sampleCSVRecord: CSVRecord[] = [
   { id: 1, json: [1, 2, 3, 4, 5, 6, 7, 8, 9] },
@@ -51,7 +51,7 @@ describe('Rotate Table', () => {
     });
 
     it('should rotate array of size 1', () => {
-      const { result } = rotateTable['rotateTable']([1])
+      const { result } = rotateTable['rotateTable']([1]);
       expect(result).toEqual([1]);
     });
 
@@ -72,7 +72,7 @@ describe('Rotate Table', () => {
     });
 
     it('should rotate array of size 16', () => {
-      const { result } = rotateTable['rotateTable']([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
+      const { result } = rotateTable['rotateTable']([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]);
       expect(result)
         .toEqual([5, 1, 2, 3, 9, 10, 6, 4, 13, 11, 7, 8, 14, 15, 16, 12]);
     });
@@ -92,5 +92,5 @@ describe('Rotate Table', () => {
     it('should return the rotated csv value', () => {
       expect(rotateTable.execute(sampleCSVRecord[0])).toMatchSnapshot();
     });
-  })
+  });
 });

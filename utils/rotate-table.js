@@ -2,9 +2,27 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RotateTable = void 0;
 class RotateTable {
+    /**
+     * Checks if a number is an integer
+     * @date 04/01/2023 - 15:22:59
+     *
+     * @private
+     * @param {number} num
+     * @returns {boolean}
+     */
     isValid(num) {
         return Number(num) === num && num % 1 === 0;
     }
+    /**
+     * Calculates and returns the new index of an item in the array
+     * @date 04/01/2023 - 15:23:42
+     *
+     * @public
+     * @param {number} index
+     * @param {number} root
+     * @param {number} size
+     * @returns {number}
+     */
     getNewIndex(index, root, size) {
         let newIndex = index;
         switch (true) {
@@ -23,6 +41,14 @@ class RotateTable {
         }
         return newIndex;
     }
+    /**
+     * Rotate a table and its child table clockwise when its a square
+     * @date 04/01/2023 - 15:24:12
+     *
+     * @private
+     * @param {number[]} table
+     * @returns {RotateTableResult}
+     */
     rotateTable(table) {
         const root = Math.sqrt(table.length);
         const isValid = this.isValid(root);
@@ -56,6 +82,14 @@ class RotateTable {
             isValid,
         };
     }
+    /**
+     * Executes the class's use case
+     * @date 04/01/2023 - 15:25:06
+     *
+     * @public
+     * @param {CSVRecord} { id, json }
+     * @returns {CSVOutput}
+     */
     execute({ id, json }) {
         const { result, isValid } = this.rotateTable(json);
         const tableAsString = JSON.stringify(result);

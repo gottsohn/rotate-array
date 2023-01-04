@@ -7,9 +7,24 @@ const path = require("path");
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { createStream } = require('csv-stream');
 class CSVProcessor {
+    /**
+     * Return full file path
+     * @date 04/01/2023 - 15:22:07
+     *
+     * @private
+     * @param {string} filename
+     * @returns {*}
+     */
     getFilePath(filename) {
         return path.join(__dirname, '../', filename);
     }
+    /**
+     * Creates an instance of CSVProcessor.
+     * @date 04/01/2023 - 15:22:23
+     *
+     * @constructor
+     * @param {RotateTable} rotateTable
+     */
     constructor(rotateTable) {
         this.rotateTable = rotateTable;
         this.columns = ['id', 'json'];
@@ -26,6 +41,15 @@ class CSVProcessor {
             throw Error('File does not exist');
         }
     }
+    /**
+     * Read and write CSV stream line by line
+     * @date 04/01/2023 - 15:21:50
+     *
+     * @private
+     * @async
+     * @param {string} fullFilePath
+     * @returns {Promise<boolean>}
+     */
     async parseAndStream(fullFilePath) {
         const inputStream = (0, fs_1.createReadStream)(fullFilePath);
         const options = {
@@ -59,6 +83,15 @@ class CSVProcessor {
         });
         return result;
     }
+    /**
+     * Executes the class's use case
+     * @date 04/01/2023 - 15:22:41
+     *
+     * @public
+     * @async
+     * @param {string} filename
+     * @returns {*}
+     */
     async execute(filename) {
         const fullFilePath = this.getFilePath(filename);
         // validate the CSV file
