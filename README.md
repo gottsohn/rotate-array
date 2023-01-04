@@ -3,6 +3,9 @@ The CSV input is read and processed line by line.
 Each CSV line is read, processed and streamed out, irrespective of consequitive lines.
 This make the process more efficient by saving system memory in the cases of larger files to be processed.
 
+### Github Actions
+ - Check the github actions to see the CI pipeline gengerated for this project
+
 ### Setup
  - Node v18 or newer is required to run project
  - Run `npm install` from the project directory
