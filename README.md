@@ -19,8 +19,9 @@ This make the process more efficient by saving system memory in the cases of lar
  
 
 ### Building
+- The entry point as defined in `package.json` is *cli.ts*
 - To transpile from typescript to javascript, run `npm run build` from project directory. 
-- The build creates the `.js` files in same directory as the transpiled `.ts` files, to meet specifications
+- The build creates the `.js` files in same directory as the transpiled `.ts` files, to **meet specifications**
 
 ### Running
  - To run the project and ouput the CSV, place the input csv in project directory and run the the following in your command line `node cli.js input.csv > output.csv`
