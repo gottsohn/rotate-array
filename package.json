@@ -8,10 +8,11 @@
     "start": "tsc -p tsconfig.json && node cli.js",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint --fix . --ext .ts",
-    "test": "jest"
+    "test": "jest",
+    "vex": "rotate"
   },
   "bin": {
-    "rotate": "./bin/index.js"
+    "rotate": "./cli.js"
   },
   "keywords": [
     "cli",
