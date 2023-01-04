@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": false,
+        "sourceMap": false,
+        "lib": [
+            "dom",
+            "ES2020"
+        ],
+        "types": [
+            "jest"
+        ],
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "noUnusedLocals": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "noUnusedParameters": true,
+        "forceConsistentCasingInFileNames": true,
+        "typeRoots": [
+            "node_modules/@types",
+        ]
+    },
+    "include": [
+        "./cli.ts"
+    ],
+}
