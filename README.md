@@ -14,14 +14,14 @@ This makes the process more efficientm, saving system memory in the case of larg
 ### Testing
  - Run `npm test` from the project directory
  - Coverage covers all `.ts` files in application directory (exluding typings)
- - Browse test coverage [here](./coverage/unit/lcov-report/index.html)
- - The unit test cover cases of 1, 2, 3, 4 and 6 square tables and an invalid tables as a bonus ;)
+ - After running the tests, you can browse test coverage [here](./coverage/unit/lcov-report/index.html)
+ - The unit test cover cases of 1, 2, 3, 4 and 6 square tables as well as an invalid table as a bonus ;)
  
 
 ### Building
 - The entry point as defined in `package.json` is **cli.js** transpiled from **cli.ts**
 - To transpile from typescript to javascript, run `npm run build` from project directory. 
-- The build creates the `.js` files in same directory as the transpiled `.ts` files, to **meet specifications**
+- The build creates the `.js` files `./dist/` directory
 
 ### Running
  - To run the project and ouput the CSV, place the input csv in project directory and run the the following in your command line `node cli.js input.csv > output.csv`
