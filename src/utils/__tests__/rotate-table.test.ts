@@ -1,4 +1,4 @@
-import { CSVRecord } from '../../models/types';
+import { CSVRecord } from '../../interfaces';
 import { RotateTable } from '../rotate-table';
 
 const sampleCSVRecord: CSVRecord[] = [

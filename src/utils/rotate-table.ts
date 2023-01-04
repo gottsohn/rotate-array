@@ -1,4 +1,4 @@
-import { CSVOutput, CSVRecord } from '../models/types';
+import { CSVOutput, CSVRecord } from '../interfaces/index';
 
 interface RotateTableResult {
   result: number[];

@@ -5,7 +5,7 @@ import * as path from 'path';
 const { createStream } = require('csv-stream');
 
 import { RotateTable } from './rotate-table';
-import { CSVRawRecord, CSVRecord } from '../models/types';
+import { CSVRawRecord, CSVRecord } from '../interfaces';
 
 export class CSVProcessor {
   private outputStream!: fastCSV.CsvFormatterStream<fastCSV.FormatterRow, fastCSV.FormatterRow>;
