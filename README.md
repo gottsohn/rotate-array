@@ -1,7 +1,7 @@
 ### Rotate Array CLI
 The CSV input is read and processed line by line.
-Each CSV line is read, processed and streamed out, irrespective of consequitive lines.
-This make the process more efficient by saving system memory in the cases of larger files to be processed.
+Each CSV line is read, processed and streamed out, irrespective of the previous or the next line.
+This makes the process more efficientm, saving system memory in the case of large file to be processing.
 
 ### Github Actions
  - Check the github actions to see the CI pipeline gengerated for this project
@@ -19,7 +19,7 @@ This make the process more efficient by saving system memory in the cases of lar
  
 
 ### Building
-- The entry point as defined in `package.json` is *cli.ts*
+- The entry point as defined in `package.json` is **cli.js** transpiled from **cli.ts**
 - To transpile from typescript to javascript, run `npm run build` from project directory. 
 - The build creates the `.js` files in same directory as the transpiled `.ts` files, to **meet specifications**
 
@@ -29,9 +29,9 @@ This make the process more efficient by saving system memory in the cases of lar
 
 
 ### Suggestions
-Using this guide, the cli application can be added to the system binary to make the it conformal. 
+Using this guide, the cli application can be added to the system binary to make the it conventional. 
 
-- Make the output file global using: `npm install -g .`
+- Make the cli script global using: `npm install -g .`
 - And run this from the command line anywhere using: `rotate input.csv > output.csv`
 
 Checkout the bin configuration in line 14 [here](./package.json).

@@ -21,7 +21,7 @@ export class CSVProcessor {
    * @returns {*}
    */
   private getFilePath(filename: string) {
-    return path.join(__dirname, '../', filename);
+    return path.join(process.cwd(), filename);
   }
 
   
@@ -45,7 +45,7 @@ export class CSVProcessor {
 
     const fileExists = existsSync(fullFilePath);
     if (!fileExists) {
-      throw Error('File does not exist');
+      throw Error(`File does not exist: ${fullFilePath}`);
     }
   }
   
