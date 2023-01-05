@@ -11,11 +11,12 @@ This makes the process more efficientm, saving system memory in the case of larg
  - Run `npm install` from the project directory
 
 
-### Testing
+### Testing 
  - Run `npm test` from the project directory
  - Coverage covers all `.ts` files in application directory (exluding typings)
- - After running the tests, you can browse test coverage [here](./coverage/unit/lcov-report/index.html)
+ - After running the tests, you can browse test coverage output from your local machine  [./coverage/unit/lcov-report/index.html](./coverage/unit/lcov-report/index.html)
  - The unit test cover cases of 1, 2, 3, 4 and 6 square tables as well as an invalid table as a bonus ;)
+ - Tests can also be viewed from the github workflows pipeline.
  
 
 ### Building
@@ -34,4 +35,4 @@ Using this guide, the cli application can be added to the system binary to make 
 - Make the cli script global using: `npm install -g .`
 - And run this from the command line anywhere using: `rotate input.csv > output.csv`
 
-Checkout the bin configuration in line 14 [here](./package.json).
+Checkout the bin configuration in line 14 [here](./package.json#L14).

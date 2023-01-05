@@ -10,7 +10,7 @@ import { CSVProcessor } from './csv-processor';
  * @typedef {ArgumentProcessor}
  */
 export class ArgumentProcessor {
-  public static CLI_INVALID_ARGS = 'Invalid arguments. Type --help for usage';
+  public static readonly CLI_INVALID_ARGS = 'Invalid argument, enter [/path/to/csv] as only argument e.g input.csv';
   constructor(private csvProcessor: CSVProcessor) { }
 
   public async execute(args: string[]) {
