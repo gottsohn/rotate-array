@@ -1,4 +1,3 @@
-/**
- * Application entry point
- */
+#!/usr/bin/env node
+'use strict';
 require('./dist/cli');

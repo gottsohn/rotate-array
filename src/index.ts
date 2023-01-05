@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 // istanbul ignore file
 import { ArgumentProcessor } from './utils/argument-processor';
 import { CSVProcessor } from './utils/csv-processor';
