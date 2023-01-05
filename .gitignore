@@ -3,3 +3,5 @@ coverage
 .DS_STORE
 output.csv
 dist/
+*.log
+*.temp
