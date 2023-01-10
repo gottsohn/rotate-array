@@ -19,7 +19,7 @@ export class RotateTable {
     return Number(num) === num && num % 1 === 0;
   }
 
-  
+
   /**
    * Calculates and returns the new index of an item in the array
    * @date 04/01/2023 - 15:23:42
@@ -31,26 +31,30 @@ export class RotateTable {
    * @returns {number}
    */
   public getNewIndex(index: number, root: number, size: number) {
-    let newIndex = index;
-    switch (true) {
-    case index + 1 < root:
-      newIndex = index + 1;
-      break;
-    case size - index < root && index % root !== 0:
-      newIndex = index - 1;
-      break;
-    case index > 0 && index % root === 0:
-      newIndex = index - root;
-      break;
-    case (index + 1) % root === 0 && index + 1 < size:
-      newIndex = index + root;
-      break;
+    // Move items in top row to the right
+    if (index + 1 < root) {
+      return index + 1;
     }
 
-    return newIndex;
+    // Move items in bottom row to the left
+    if (size - index < root && index % root !== 0) {
+      return index - 1;
+    }
+
+    // Move items in left column upwards
+    if (index > 0 && index % root === 0) {
+      return index - root;
+    }
+
+    // Move items in right column downwards
+    if ((index + 1) % root === 0 && index + 1 < size) {
+      return index + root;
+    }
+
+    return index;
   }
 
-  
+
   /**
    * Rotate a table and its child table clockwise when its a square
    * @date 04/01/2023 - 15:24:12
@@ -73,7 +77,7 @@ export class RotateTable {
     const result: number[] = new Array(size);
     const childIndicies: number[] = [];
     const childTable: number[] = [];
-    
+
     for (let i = 0; i < size; i++) {
       const newIndex = this.getNewIndex(i, root, size);
       if (i === newIndex) {
@@ -85,7 +89,7 @@ export class RotateTable {
     }
 
     // using recursion to process child tables that match the square criteria
-    if (childTable.length < table.length) {  
+    if (childTable.length < table.length) {
       const { result: childResult } = this.rotateTable(childTable);
       childIndicies.forEach((i, index) => {
         result[i] = childResult[index];
@@ -98,7 +102,7 @@ export class RotateTable {
     };
   }
 
-  
+
   /**
    * Executes the class's use case
    * @date 04/01/2023 - 15:25:06

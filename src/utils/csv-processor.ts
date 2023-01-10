@@ -84,7 +84,7 @@ export class CSVProcessor {
       this.outputStream.write(result);
     });
 
-    const result = new Promise((resolve: (isComplete: boolean) => void, reject: (err: Error) => void) => {
+    const result = new Promise<boolean>((resolve, reject) => {
       stream.on('end', () => {
         this.outputStream.end();
         resolve(true);
